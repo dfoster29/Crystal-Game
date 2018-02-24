@@ -1,0 +1,26 @@
+.images {
+  width: 250px;
+  padding: 5px;
+}
+
+.images:hover {
+  opacity: .75;
+}
+
+body {
+  background-image: url("../images/space.jpg");
+}
+
+#card {
+  background-color: rgba(255,255,255,.8);
+}
+
+#card-head {
+  background-color: rgb(211, 208, 36);
+}
+
+.jumbotron {
+  background-color: black;
+  color: white;
+  padding: 25px 0;
+}

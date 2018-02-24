@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Crystal Collector</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+
+  <div class="jumbotron text-center w-100">
+    <h1 class="">
+      Crystal Collector
+    </h1>
+  </div>
+
+
+  <div class="container" id="container-margin">
+    <div class="row main-body">
+      <div class="col-md-5">
+        <div class="card mb-5" id="card">
+          <div class="card-header text-center" id="card-head">
+            <h3>Player Stats</h3>
+          </div>
+          <div class="card-body">
+            <div class="card-text text-center">
+              <h3 class="row">
+                <p class="col-md-6">wins:</p>
+                <span class="col-md-6" id=wins>0</span>
+              </h3>
+              <h3 class="row">
+                <p class="col-md-6">losses:</p>
+                <span class="col-md-6" id=losses>0</span>
+              </h3>
+              <div>
+                <button id="reset-button" class="btn-lg btn-danger mr-3" onclick="resetGame()">Reset</button>
+                <button id="start-button" class="my-1 btn-lg btn-primary my-3" onclick="newGame()">Next Game</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="col-md-7">
+        <div class="card mb-5" id="card">
+          <div class="card-header text-center" id="card-head">
+            <h2 id="target-number">Target Number : </h2>
+           
+            <h2 id="current-score">Current Score : 0</h2>
+          </div>
+
+          <div class="row card-text">
+            <div class="col-md-6">
+              <img src="./assets/images/crystal.png" class="images my-3" onclick="addNumber();" />
+            </div>
+
+            <div class="col-md-6">
+              <img src="./assets/images/crystal.png" class="images my-3" onclick="addNumber();" />
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-md-6">
+              <img src="./assets/images/crystal.png" class="images my-3 " onclick="addNumber();" />
+            </div>
+
+            <div class="col-md-6">
+              <img src="./assets/images/crystal.png" class="images my-3" onclick="addNumber();" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="jumbotron-fluid bg-dark p-3 text-center fixed-bottom w-100">
+    <h5>Copyright &copy; 2018 Daniel Foster</h5>
+  </div>
+
+
+  <script src="./assets/javascript/game.js"></script>
+</body>
+
+</html>

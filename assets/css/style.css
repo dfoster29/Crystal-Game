@@ -1,9 +1,10 @@
-.images {
-  width: 250px;
-  padding: 5px;
+.crystal-images {
+  width: 260px;
+  margin: auto;
+  display: block;
 }
 
-.images:hover {
+.crystal-images:hover {
   opacity: .75;
 }
 

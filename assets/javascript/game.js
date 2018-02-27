@@ -3,6 +3,16 @@ var targetNumberBank = [60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70];
 var wins = 0;
 var losses = 0;
 
+
+
+// make an array of the four crystal number options
+var numberOptions1 = [6, 7, 8, 10, 11, 12];
+var numberOptions2 = [1, 2, 3, 4, 5, 6];
+var numberOptions3 = [6, 7, 8, 10, 11, 12];
+var numberOptions4 = [1, 3, 5, 7];
+
+if (targetNumber != counter && counter < targetNumber) {
+function newGame() {
 // display the target number to the page
 var targetNumber =
   targetNumberBank[Math.floor(Math.random() * targetNumberBank.length)];
@@ -13,12 +23,6 @@ $("#target-number").text("Target Number : " + targetNumber);
 // start the current score counter at zero
 var counter = 0;
 
-// make an array of the four crystal number options
-var numberOptions1 = [1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12];
-var numberOptions2 = [1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12];
-var numberOptions3 = [1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12];
-var numberOptions4 = [1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12];
-
 // Each imageCrystal will be given a src link to the crystal image
 // pick our word at random from the wordBank
 var crystal1 =
@@ -26,15 +30,15 @@ var crystal1 =
 console.log(crystal1);
 
 var crystal2 =
-  numberOptions1[Math.floor(Math.random() * numberOptions1.length)];
+  numberOptions2[Math.floor(Math.random() * numberOptions2.length)];
 console.log(crystal2);
 
 var crystal3 =
-  numberOptions1[Math.floor(Math.random() * numberOptions1.length)];
+  numberOptions3[Math.floor(Math.random() * numberOptions3.length)];
 console.log(crystal3);
 
 var crystal4 =
-  numberOptions1[Math.floor(Math.random() * numberOptions1.length)];
+  numberOptions4[Math.floor(Math.random() * numberOptions4.length)];
 console.log(crystal4);
 
 // Each imageCrystal will be given a data attribute called data-crystalValue.
@@ -108,5 +112,17 @@ $("#crystal-4").on("click", function() {
     $("#losses").text(losses);
   }
 });
+};
+};
 
+$("#reset-button").on("click", function resetGame() {
+  wins = 0;
+  losses = 0;
+  $("#wins").text(wins);
+  $("#losses").text(losses);
+  counter = 0;
+  $("#current-score").text("Current Score : " + counter);
+  newGame();
+});
 
+newGame();
